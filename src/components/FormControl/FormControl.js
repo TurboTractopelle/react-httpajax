@@ -4,7 +4,7 @@ import Input from './Input/Input'
 const FormControl =(props)=> {
 return (
         <div className="formcontrol">
-            <Input action={props.filterByUserIdHandler}>Filter by UserID:</Input>
+            <Input action={props.filterByUserIdHandler}>Filter by todo id:</Input>
         </div>
     );
 }
