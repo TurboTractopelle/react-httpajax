@@ -23,11 +23,9 @@ class App extends Component {
   filterByUserIdHandler = (e)=>{
     const id = e.target.value;
     if (id) {
-      //console.log(id)
       const todo = store.filter(i=>i.id==id)[0];
       const userId = todo["userId"]
-      console.log(todo, userId)
-      this.setState(prevState=>({...prevState, todos:{[userId]:[{...todo}]},  filter:{...prevState.filter, id:id}}))
+      this.setState(prevState=>({...prevState, todos:{[userId]:[todo]},  filter:{...prevState.filter, id:id}}))
     }else {
       this.setState(prevState=>({...prevState, todos: storeByUserId, filter:{...prevState.filter, id:""}}))
     }
